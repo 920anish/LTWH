@@ -30,10 +30,6 @@ async function displayPDF(typedarray) {
   pdfViewer.innerHTML = '';  
   pdfViewer.appendChild(canvas);
 
-  // Adjust layout after PDF upload
-  document.getElementById('pdfViewerContainer').style.display = 'flex';  
-  document.querySelector('aside').style.width = '300px';  
-  document.querySelector('aside').classList.remove('center-content');  
 
   canvas.addEventListener('mousemove', function(event) {
     const rect = canvas.getBoundingClientRect();
