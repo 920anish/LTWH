@@ -30,6 +30,8 @@ async function displayPDF(typedarray) {
   pdfViewer.innerHTML = '';  
   pdfViewer.appendChild(canvas);
 
+  document.getElementById('pdfViewerContainer').style.display = 'flex';
+  document.getElementById('sidebar').classList.add('move-to-side');
 
   canvas.addEventListener('mousemove', function(event) {
     const rect = canvas.getBoundingClientRect();
