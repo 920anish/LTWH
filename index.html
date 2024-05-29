@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your PDF App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="pdfViewerContainer">
+      <div id="pdfViewer">
+        <!-- PDF content will be displayed here -->
+      </div>
+    </div>
+
+    <aside id="sidebar">
+      <header>
+        <h1>Coordinates Extractor </h1>
+        <p>Get live LTWH coordinates from your PDFs.</p>
+        <label for="fileInput" class="upload-btn">
+          <span>Upload PDF</span>
+          <input type="file" id="fileInput" accept=".pdf" onchange="handleFileSelect(event)">
+        </label>
+      </header>
+
+      <div id="coordinates" class="coordinates">
+        LTWH: <span id="coords"></span>
+      </div>
+
+      <div id="copySuccess" class="copy-success">
+        Coordinates copied successfully!
+      </div>
+    </aside>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
